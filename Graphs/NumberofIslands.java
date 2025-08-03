@@ -30,3 +30,25 @@ class Solution {
 
     }
 }
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+
+        int rows=sc.nextInt();
+        int cols=sc.nextInt();
+        char[][] grid=new char[rows][cols];
+        for(int i=0;i<rows;i++)
+        {
+            for(int j=0;j<cols;j++)
+            {
+                grid[i][j]=sc.next().charAt(0);
+            }
+        }
+        Solution sol=new Solution();
+        int result=sol.numIslands(grid);
+        System.out.println(result);
+    }
+}
